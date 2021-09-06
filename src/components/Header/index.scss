@@ -1,0 +1,204 @@
+@import "../../assets/scss/variable";
+@mixin hover {
+    cursor: pointer;
+}
+.header {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    background-color: $color;
+    box-sizing: border-box;
+    &__home,
+    &__feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__account {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        & a {
+            color: white;
+            font-weight: 600;
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        & a:hover {
+            opacity: 1;
+        }
+        &-login,
+        &-register {
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+    &__nav {
+        height: $height;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        & a {
+            text-decoration: none;
+        }
+    }
+    &__search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 50px;
+        overflow: hidden;
+        &-input {
+            width: 500px;
+            max-width: 500px;
+            outline: none;
+            border: none;
+            padding: 8px;
+            font-weight: 350;
+            font-size: 15px;
+            color: gray;
+            border-radius: 4px;
+        }
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0px;
+            height: 33px;
+            width: 40px;
+            background-color: red;
+            outline: none;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        line-height: $height;
+
+        &:hover {
+            @include hover();
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            font-style: oblique;
+            color: white;
+            &:hover span {
+                transition: all ease-in 0.35s;
+                @include hover();
+            }
+            span {
+                color: red;
+                font-size: 30px;
+            }
+        }
+
+        img {
+            width: 45px;
+            color: white;
+        }
+    }
+
+    &__cart {
+        text-align: center;
+        margin-left: 50px;
+        position: relative;
+        &:hover {
+            @include hover();
+        }
+        &-title {
+            font-size: 15px;
+        }
+        span {
+            position: absolute;
+            left: 13px;
+            top: -6px;
+            background-color: red;
+            color: #ffe4e1;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+            line-height: 17px;
+            text-align: center;
+        }
+    }
+    &__menu {
+        background-color: #252525;
+        &-list {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        &-items {
+            position: relative;
+            margin: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover > .header__menu-sub-list {
+                display: block;
+            }
+            & a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 14px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        &-sub-list {
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            top: 100%;
+            background-color: white;
+            width: 300px;
+            max-width: 300px;
+            padding: 10px;
+            display: none;
+            box-shadow: 1px 2px 5px gray;
+            transition: linear 3s;
+            animation: growd ease-in 0.4s;
+        }
+        &-sub-items {
+            margin-bottom: 10px;
+            & a {
+                color: black;
+                font-weight: 600;
+                font-size: 15px;
+                text-decoration: none;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@keyframes growd {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

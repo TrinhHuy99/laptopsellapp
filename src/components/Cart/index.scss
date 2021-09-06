@@ -1,0 +1,188 @@
+.cart {
+    &__list {
+        &-des {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            width: 816px;
+            max-width: 816px;
+        }
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &-remove-all {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 15px;
+            &:hover {
+                color: #c00;
+            }
+        }
+    }
+    padding: 40px 0;
+    &__info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        & button {
+            padding: 8px;
+            min-width: 300px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+            background-color: #c00;
+            opacity: 0.8;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__header {
+        margin: 120px auto 20px auto;
+        opacity: 0.8;
+        font-size: 15px;
+    }
+    &__center {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__items {
+        &-img img {
+            width: 60px;
+            height: 60px;
+        }
+        &-img {
+            margin-right: 20px;
+            height: 60px;
+        }
+        &-title {
+            margin-right: 20px;
+            flex: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &-price {
+            margin-right: 20px;
+            color: #c00;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &-qt {
+            margin-right: 20px;
+            &-value {
+                background-color: whitesmoke;
+                max-width: 20px;
+                text-align: center;
+                margin: auto 0;
+                padding: 2px 10px 3px 10px;
+            }
+            & button {
+                cursor: pointer;
+                border: none;
+                outline: none;
+                padding: 6px 10px;
+            }
+        }
+        &-remove {
+            color: gray;
+            cursor: pointer;
+            font-size: 20px;
+            &:hover {
+                color: #c00;
+            }
+        }
+    }
+    &__payment {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 50px;
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        &-sales {
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+            &-input,
+            &-btn {
+                outline: none;
+                padding: 4px;
+                border-radius: 4px;
+                border: 1px solid gray;
+            }
+            &-btn {
+                cursor: pointer;
+                margin-left: 10px;
+                padding: 5px;
+                border: none;
+                background-color: white;
+                &:hover {
+                    color: white;
+                    background-color: #c00;
+                }
+            }
+        }
+    }
+    &__prices {
+        &-title {
+            margin: 0;
+            margin-bottom: 0;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        &-items {
+            list-style: none;
+            padding: 0;
+        }
+        &-item {
+            padding: 10px 0;
+            border-bottom: 1px solid lightgray;
+        }
+        &-value {
+            font-weight: 550;
+        }
+        &-des {
+            margin-bottom: 10px;
+        }
+        &-process {
+            width: 50%;
+            margin-top: 20px;
+            font-size: 15px;
+            padding: 10px;
+            background-color: #c00;
+            opacity: 0.8;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    i {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+    }
+}
